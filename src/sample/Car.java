@@ -28,32 +28,32 @@ public final class Car extends Vehicle {
 
   public String getExteriorFeatures() {
 
-    String features = "";
+    StringBuilder features = new StringBuilder();
     for (int i = 0; i < this.feature.length; i++) {
       if (this.feature[i] instanceof ExteriorFeature) {
         if (features.length() == 0) {
-          features += this.feature[i];
+          features.append(this.feature[i]);
         } else {
-          features += "\n" + this.feature[i];
+          features.append("\n").append(this.feature[i]);
         }
       }
     }
-    return features;
+    return features.toString();
   }
 
   public String getInteriorFeatures() {
 
-    String features = "";
+    StringBuilder features = new StringBuilder();
     for (int i = 0; i < this.feature.length; i++) {
       if (this.feature[i] instanceof InteriorFeature) {
         if (features.length() == 0) {
-          features += this.feature[i];
+          features.append(this.feature[i]);
         } else {
-          features += "\n" + this.feature[i];
+          features.append("\n").append(this.feature[i]);
         }
       }
     }
-    return features;
+    return features.toString();
   }
 
   public String toString() {
