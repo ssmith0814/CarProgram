@@ -19,40 +19,41 @@ public class Vehicle implements Engine, Chassis {
     vehicleMake = "Generic";
     vehicleModel = "Generic";
     vehicleFrame = null;
-    vehicleType = "None";
+    vehicleType = "Generic";
     driveTrain = "2WD: Two Wheel Drives";
     vehicleEngine = new ManufacturedEngine();
   }
 
-  private Vehicle(Date vehicleManufacturedDate, String vehicleManufacturer, String vehicleMake,
-                  String vehicleModel, Chassis vehicleFrame, String vehicleType,
+  public Vehicle(Date vehicleManufacturedDate, String vehicleManufacturer, String vehicleMake,
+                  String vehicleModel, Chassis vehicleFrame, String vehicleType, String driveTrain,
                   Engine vehicleEngine) {
     this.vehicleManufacturedDate = vehicleManufacturedDate;
     this.vehicleManufacturer = vehicleManufacturer;
     this.vehicleMake = vehicleMake;
     this.vehicleModel = vehicleModel;
     this.vehicleFrame = vehicleFrame;
+    this.driveTrain = driveTrain;
     this.vehicleType = vehicleType;
     this.vehicleEngine = vehicleEngine;
   }
 
   public String toString() {
-    return "Manufacturer Name  : " + vehicleManufacturer + "\n"
-        + "Manufactured Date  : " + vehicleManufacturedDate + "\n"
-        + "Vehicle Make  : " + vehicleMake + "\n"
-        + "Vehicle Model  : " + vehicleModel + "\n"
-        + "Vehicle Type  : " + vehicleType + "\n" + vehicleEngine;
+    return "Manufacturer Name : " + vehicleManufacturer + "\n"
+        + "Manufactured Date : " + vehicleManufacturedDate + "\n"
+        + "Vehicle Make : " + vehicleMake + "\n"
+        + "Vehicle Model : " + vehicleModel + "\n"
+        + "Vehicle Type : " + vehicleType + "\n" + vehicleEngine;
   }
 
-  public static void main(String[] args) {
-    Vehicle vehicleOne = new Vehicle();
-    Vehicle vehicleTwo = new Vehicle(new Date(), "Honda", "Honda", "Prelude",null, null,
-        new ManufacturedEngine("Honda", new Date(), "H-Series", "H23A1",
-            4, "88 AKI", "2WS: Two-Wheel Drive"));
-    System.out.println(vehicleOne);
-    System.out.println();
-    System.out.println(vehicleTwo);
-  }
+//  public static void main(String[] args) {
+//    Vehicle vehicleOne = new Vehicle();
+//    Vehicle vehicleTwo = new Vehicle(new Date(), "Honda", "Honda", "Prelude",null, null, "None",
+//        new ManufacturedEngine("Honda", new Date(), "H-Series", "H23A1",
+//            "88 AKI", 4, "2WS: Two-Wheel Drive"));
+//    System.out.println(vehicleOne);
+//    System.out.println();
+//    System.out.println(vehicleTwo);
+//  }
 
   @Override
   public Chassis getChassisType() {

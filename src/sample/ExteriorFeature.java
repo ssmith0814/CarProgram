@@ -16,13 +16,13 @@ public class ExteriorFeature implements Feature {
     return "Exterior [" + exteriorFeature + "]";
   }
 
-  public static void main(String[] args) {
-    ExteriorFeature featureOne = new ExteriorFeature();
-    ExteriorFeature featureTwo = new ExteriorFeature("Fog Lamps");
-    System.out.println(featureOne);
-    System.out.println();
-    System.out.println(featureTwo);
-  }
+//  public static void main(String[] args) {
+//    ExteriorFeature featureOne = new ExteriorFeature();
+//    ExteriorFeature featureTwo = new ExteriorFeature("Fog Lamps");
+//    System.out.println(featureOne);
+//    System.out.println();
+//    System.out.println(featureTwo);
+//  }
 
   @Override
   public String getFeature() {

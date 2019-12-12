@@ -24,7 +24,7 @@ public class VehicleFrame implements Chassis {
 
   @Override
   public String toString() {
-    return "Chassis  : " + chassis + "\n" + "Vehicle Frame  : " + vehicleFrameType;
+    return "Chassis : " + chassis + "\n" + "Vehicle Frame : " + vehicleFrameType;
   }
 
   public static void main(String[] args) {

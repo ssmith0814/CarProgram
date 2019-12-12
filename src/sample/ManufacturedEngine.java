@@ -17,14 +17,14 @@ public class ManufacturedEngine implements Engine {
     engineManufacturedDate = new Date();
     engineMake = "Generic";
     engineModel = "Generic";
-    engineType = "85 AKI";
+    engineType = "Generic";
     engineCylinders = 0;
-    driveTrain = "2WD: Two Wheel Drives";
+    driveTrain = "Generic";
   }
 
   public ManufacturedEngine(String engineManufacturer, Date engineManufacturedDate,
-                            String engineMake, String engineModel, int engineCylinders,
-                            String engineType, String driveTrain) {
+                            String engineMake, String engineModel,String engineType, int engineCylinders,
+                            String driveTrain) {
     this.engineManufacturer = engineManufacturer;
     this.engineManufacturedDate = engineManufacturedDate;
     this.engineMake = engineMake;
@@ -47,7 +47,7 @@ public class ManufacturedEngine implements Engine {
   public static void main(String[] args) {
     ManufacturedEngine engineOne = new ManufacturedEngine();
     ManufacturedEngine engineTwo = new ManufacturedEngine("Honda", new Date(), "H-Series", "H23A1",
-        4, "88 AKI", "2WS: Two-Wheel Drive");
+        "88 AKI", 4, "2WS: Two-Wheel Drive");
     System.out.println(engineOne);
     System.out.println();
     System.out.println(engineTwo);
